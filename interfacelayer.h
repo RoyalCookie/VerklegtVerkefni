@@ -1,7 +1,7 @@
 #ifndef INTERFACELAYER_H
 #define INTERFACELAYER_H
 
-class interfaceLayer : public interfaceLayer
+class interfaceLayer
 {
 public:
     interfaceLayer();

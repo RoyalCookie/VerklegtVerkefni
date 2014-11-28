@@ -1,10 +1,21 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-class person : public person
-{
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+class person{
 public:
-    person();
+    person(string variables);
+    friend ostream& operator<<(ostream& stream, person me);
+private:
+    string firstName;
+    string lastName;
+    char gender;
+    int dateOfBirth;
+    int dateOfDeath;
 };
 
 #endif // PERSON_H

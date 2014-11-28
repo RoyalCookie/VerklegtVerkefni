@@ -1,7 +1,7 @@
 #ifndef SERVICELAYER_H
 #define SERVICELAYER_H
 
-class serviceLayer : public serviceLayer
+class serviceLayer
 {
 public:
     serviceLayer();

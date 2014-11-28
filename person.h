@@ -6,6 +6,10 @@
 #include <vector>
 
 using namespace std;
+
+// Constructor For Person
+// Takes in a  single line in the format of "Fname Lname Gender DateOfBirth DateOfDeath" i.e "Jon Asd m  1900 1948"
+// Takes the strings and breaks it down and sets the value of its properties.
 class person{
 public:
     person(string variables);

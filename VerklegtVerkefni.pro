@@ -15,10 +15,4 @@ CONFIG   -= app_bundle
 TEMPLATE = app
 
 
-SOURCES += main.cpp \
-    servicelayer.cpp \
-    interfacelayer.cpp
-
-HEADERS += \
-    servicelayer.h \
-    interfacelayer.h
+SOURCES += main.cpp

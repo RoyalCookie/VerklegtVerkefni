@@ -17,8 +17,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     servicelayer.cpp \
-    interfacelayer.cpp
+    interfacelayer.cpp \
+    person.cpp
 
 HEADERS += \
     servicelayer.h \
-    interfacelayer.h
+    interfacelayer.h \
+    person.h

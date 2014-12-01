@@ -56,6 +56,7 @@ void interfaceLayer::skra()
 {   char afram;
     do{
     string registerperson;
+    cout << "Register one person at  a time\n";
     cout << "Enter first and last name, gender(M/F) and time alive"<<endl;
     cout << "For example:\n";
     cout << "Jón Jónsson M 1950-2010\n";

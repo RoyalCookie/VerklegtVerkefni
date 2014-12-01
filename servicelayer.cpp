@@ -5,7 +5,8 @@ serviceLayer::serviceLayer()
 }
 
 vector<person> serviceLayer::search(string terms, char type){
-    vector<person> listi = helper.read();
+    helper help;
+    vector<person> listi = help.read();
     vector<person> filteredList;
     switch(type){
         case 'N':       // Name

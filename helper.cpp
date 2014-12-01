@@ -3,19 +3,13 @@
 #include <iostream>
 #include <fstream>
 
-<<<<<<< Updated upstream
-using namespace std;
-
-
 //vector<person> Sort(vector<person> listi, char type){
 //    list<person> listToSort;
 //    for(int i = 0; i < listi.size; i++){
 //        listToSort.push_back(listi[i]);
 //    }
 //}
-//vector<person> Read();
-//vector<person> Write(vector<person> listi);
-=======
+
 vector<person> helper::read()
 {
     vector<person> skil;
@@ -30,9 +24,16 @@ vector<person> helper::read()
 return skil;
 }
 
+ vector<person> write(vector<person> listi)
+ {
+     
+     
+ }
+ 
+
 
 
 
 
 //lesa inn ur textaskra og seperate-a hverja linu fyrir sig. hver lina er ein person. Skila thvi svo.
->>>>>>> Stashed changes
+

@@ -20,14 +20,21 @@ vector<person> helper::read()
 
        skil.push_back(person(lesa));
 
+
    }
 return skil;
 }
 
- vector<person> write(vector<person> listi)
+ void <person> write(person)
  {
-     
-     
+   ofstream myfile;
+
+   myfile.open ("file.txt");
+
+   myfile << person;
+
+   myfile.close();
+
  }
  
 

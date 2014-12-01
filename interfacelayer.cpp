@@ -46,8 +46,17 @@ void interfaceLayer::birta()
 {
     char afram,type;
     do{
+<<<<<<< Updated upstream
     sortitby(type);
     serviceLayer.list(type);
+=======
+    cout << "N = Sort by last name then first name\n"
+         << "G = Sort by gender\n"
+         << "B = Sort by date of birth\n"
+         << "D = date of death\n";
+    cin >> type;
+    List<char type>;
+>>>>>>> Stashed changes
     cout << "\nWould you like to display again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');

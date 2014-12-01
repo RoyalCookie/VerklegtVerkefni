@@ -55,7 +55,12 @@ void interfaceLayer::birta()
 void interfaceLayer::skra()
 {   char afram;
     do{
-    service.write();
+    string registerperson;
+    cout << "Enter first and last name, gender(M/F) and time alive"<<endl;
+    cout << "For example:\n";
+    cout << "Jón Jónsson M 1950-2010\n";
+    getline (cin,registerperson);
+    service.write(registerperson);
     cout << "\nWould you like to register another person?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');

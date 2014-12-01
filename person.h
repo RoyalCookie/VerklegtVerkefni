@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -16,7 +17,6 @@ public:
     person(string variables);
     void set(string variables);
     friend ostream& operator<<(ostream& stream, person me);
-private:
     string firstName;
     string lastName;
     char gender;

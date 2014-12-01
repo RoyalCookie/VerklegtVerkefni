@@ -19,11 +19,13 @@ SOURCES += main.cpp \
     servicelayer.cpp \
     interfacelayer.cpp \
     person.cpp \
-    helper.cpp
+    helper.cpp \
+    comparer.cpp
 
 HEADERS += \
     servicelayer.h \
     interfacelayer.h \
     person.h \
     helper.h \
-    cpplinq.hpp
+    cpplinq.hpp \
+    comparer.h

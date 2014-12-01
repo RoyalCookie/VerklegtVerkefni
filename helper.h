@@ -1,6 +1,12 @@
 #ifndef HELPER_H
 #define HELPER_H
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include "person.h"
+class helper{
 
+<<<<<<< Updated upstream
 #include <vector>
 #include <string>
 #include <list>
@@ -14,4 +20,17 @@ public:
 };
 
 
+=======
+public:
+
+std::vector<person> read();
+//friend ostream& write();
+
+
+};
+
+
+
+
+>>>>>>> Stashed changes
 #endif // HELPER_H

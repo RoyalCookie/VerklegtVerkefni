@@ -17,6 +17,10 @@ public:
     person(string variables);
     void set(string variables);
     friend ostream& operator<<(ostream& stream, person me);
+<<<<<<< Updated upstream
+=======
+private:    
+>>>>>>> Stashed changes
     string firstName;
     string lastName;
     char gender;

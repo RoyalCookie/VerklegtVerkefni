@@ -12,7 +12,9 @@ using namespace std;
 // Takes the strings and breaks it down and sets the value of its properties.
 class person{
 public:
+    person();
     person(string variables);
+    void set(string variables);
     friend ostream& operator<<(ostream& stream, person me);
 private:
     string firstName;

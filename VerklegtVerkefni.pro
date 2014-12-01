@@ -25,4 +25,5 @@ HEADERS += \
     servicelayer.h \
     interfacelayer.h \
     person.h \
-    helper.h
+    helper.h \
+    cpplinq.hpp

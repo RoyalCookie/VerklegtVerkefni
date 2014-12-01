@@ -46,17 +46,8 @@ void interfaceLayer::birta()
 {
     char afram,type;
     do{
-<<<<<<< Updated upstream
     sortitby(type);
-    serviceLayer.list(type);
-=======
-    cout << "N = Sort by last name then first name\n"
-         << "G = Sort by gender\n"
-         << "B = Sort by date of birth\n"
-         << "D = date of death\n";
-    cin >> type;
-    List<char type>;
->>>>>>> Stashed changes
+    service.list(type);
     cout << "\nWould you like to display again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');
@@ -64,7 +55,7 @@ void interfaceLayer::birta()
 void interfaceLayer::skra()
 {   char afram;
     do{
-    serviceLayer.write();
+    service.write();
     cout << "\nWould you like to register another person?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');
@@ -77,7 +68,7 @@ void interfaceLayer::leita()
     cout << "Enter search term: ";
     cin >> terms;
     sortitby(type);
-    serviceLayer.search(terms, type);
+    service.search(terms, type);
     cout << "\nWould you like to search again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');

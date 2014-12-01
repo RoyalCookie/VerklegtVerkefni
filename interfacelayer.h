@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <list>
+#include "servicelayer.h"
 
 class interfaceLayer
 {
@@ -17,9 +18,6 @@ public:
     void birta();
     void sortitby(char& type);
 private:
-
-    serviceLayer list;
-    serviceLayer search;
-    serviceLayer write;
+    serviceLayer service;
 };
 #endif // INTERFACELAYER_H

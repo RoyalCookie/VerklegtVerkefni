@@ -14,6 +14,7 @@ public:
     void skra();
     void leita();
     void birta();
+    void sortitby(char& type);
 };
 
 #endif // INTERFACELAYER_H

@@ -5,6 +5,17 @@ using namespace std;
 interfaceLayer::interfaceLayer()
 {
 }
+void sortitby(char& type)
+{
+    do{
+  cout << "N = Sort by last name then first name\n"
+       << "G = Sort by gender\n"
+       << "A = Sort by alive\n";
+  cin >> type;
+      if((type!='N')|(type!='G')|(type!='A'))
+          cout << "Invalid input!";
+      }while((type!='N')|(type!='G')|(type!='A'));
+}
 void interfaceLayer::choose()
 {   char val;
     bool invalid=false;
@@ -35,12 +46,8 @@ void interfaceLayer::birta()
 {
     char afram,type;
     do{
-    cout << "N = Sort by last name then first name\n"
-         << "G = Sort by gender\n"
-         << "B = Sort by date of birth\n"
-         << "D = date of death\n";
-    cin >> type;
-    List(char type);
+    sortitby(type);
+    List(type);
     cout << "\nWould you like to display again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');
@@ -60,12 +67,8 @@ void interfaceLayer::leita()
     do{
     cout << "Enter search term: ";
     cin >> terms;
-    cout << "N = Sort by last name then first name\n"
-         << "G = Sort by gender\n"
-         << "B = Sort by date of birth\n"
-         << "D = Sort by date of death\n";
-    cin >> type;
-    Search(string terms, char type);
+    sortitby();
+    Search(terms, type);
     cout << "\nWould you like to search again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');

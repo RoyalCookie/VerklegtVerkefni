@@ -67,7 +67,7 @@ void interfaceLayer::leita()
     do{
     cout << "Enter search term: ";
     cin >> terms;
-    sortitby();
+    sortitby(type);
     Search(terms, type);
     cout << "\nWould you like to search again?(Y/N)\n";
     cin >> afram;

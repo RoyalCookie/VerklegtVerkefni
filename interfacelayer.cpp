@@ -47,7 +47,6 @@ void interfaceLayer::birta()
     char afram,type;
     do{
     sortitby(type);
-    serviceLayer list;
     serviceLayer.list(type);
     cout << "\nWould you like to display again?(Y/N)\n";
     cin >> afram;
@@ -56,8 +55,7 @@ void interfaceLayer::birta()
 void interfaceLayer::skra()
 {   char afram;
     do{
-    helper help;
-    help.write();
+    serviceLayer.write();
     cout << "\nWould you like to register another person?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');
@@ -70,7 +68,6 @@ void interfaceLayer::leita()
     cout << "Enter search term: ";
     cin >> terms;
     sortitby(type);
-    serviceLayer search;
     serviceLayer.search(terms, type);
     cout << "\nWould you like to search again?(Y/N)\n";
     cin >> afram;

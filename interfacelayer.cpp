@@ -11,11 +11,12 @@ void interfaceLayer::sortitby(char& type)
   cout << "N = Sort by last name then first name\n"
        << "G = Sort by gender\n"
        << "A = Sort by alive\n";
-  cin >> stafur;
-      if((stafur!='N')|(stafur!='n')|(stafur!='G')|(stafur!='g')|(stafur!='A')|(stafur!='a'))
-          cout << "Invalid input!";
-      }while((stafur!='N')|(stafur!='n')|(stafur!='G')|(stafur!='g')|(stafur!='A')|(stafur!='a'));
+    cin >> stafur;
     type=(toupper(stafur));
+     if((type!='N')&&(type!='G')&&(type!='A'))
+          cout << "Invalid input!\n";
+      }while((type!='N')&&(type!='G')&&(type!='A'));
+
 }
 void interfaceLayer::choose()
 {   char val;

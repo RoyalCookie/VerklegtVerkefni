@@ -18,13 +18,13 @@ TEMPLATE = app
 SOURCES += main.cpp \
     interfacelayer.cpp \
     Person.cpp \
-    helper.cpp \
     comparer.cpp \
-    serviceLayer.cpp
+    serviceLayer.cpp \
+    helper.cpp
 
 HEADERS += \
     interfacelayer.h \
     Person.h \
-    helper.h \
     comparer.h \
-    serviceLayer.h
+    serviceLayer.h \
+    helper.h

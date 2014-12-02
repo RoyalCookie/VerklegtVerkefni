@@ -1,10 +1,4 @@
 #include "helper.h"
-//vector<Person> Sort(vector<Person> listi, char type){
-//    list<Person> listToSort;
-//    for(int i = 0; i < listi.size; i++){
-//        listToSort.push_back(listi[i]);
-//    }
-//}
 
 vector<Person> helper::read()
 {
@@ -24,11 +18,13 @@ vector<Person> helper::read()
    return skil;
 }
 
-vector<Person> helper::sort(string temp)
+vector<Person> helper::sort(string temp, vector<Person> per)
 {
-
-    Comparer comp = Comparer(temp);
     list<Person> l = list<Person>();
+    for(int i = 0; i < per.size(); i++){
+        l.push_back(per[i]);
+    }
+    Comparer comp = Comparer(temp);
 
     l.sort(comp);
     vector<Person> ret;
@@ -37,8 +33,7 @@ vector<Person> helper::sort(string temp)
 }
 
 
- void helper::write(Person per)
-
+void helper::write(Person per)
  {
    ofstream myfile;
 
@@ -68,7 +63,7 @@ vector<Person> helper::sort(string temp)
    myfile.close();
 
  }
- 
+
 
 
 

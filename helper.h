@@ -1,15 +1,14 @@
+#ifndef HELPER_H
 #define HELPER_H
 
 #include "Person.h"
+#include "comparer.h"
 
-using namespace std;
 class helper{
 public:
-    vector<Person> sort(vector<Person> listi, char type);
     vector<Person> read();
-    vector<Person> sort(string temp);
+    vector<Person> sort(string temp, vector<Person> per);
     void write(Person per);
 };
 
-
-
+#endif // HELPER_H

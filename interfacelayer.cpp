@@ -6,19 +6,20 @@ interfaceLayer::interfaceLayer()
 {
 }
 void sortitby(char& type)
-{
+{   char stafur;
     do{
   cout << "N = Sort by last name then first name\n"
        << "G = Sort by gender\n"
        << "A = Sort by alive\n";
-  cin >> type;
-      if((type!='N')|(type!='G')|(type!='A'))
+  cin >> stafur;
+      if((stafur!='N')|(stafur!='n')|(stafur!='G')|(stafur!='g')|(stafur!='A')|(stafur!='a'))
           cout << "Invalid input!";
-      }while((type!='N')|(type!='G')|(type!='A'));
+      }while((stafur!='N')|(stafur!='n')|(stafur!='G')|(stafur!='g')|(stafur!='A')|(stafur!='a'));
+    type=(toupper(stafur));
 }
 void interfaceLayer::choose()
 {   char val;
-    bool invalid=false;
+    bool invalid=true;
     do {
     cout << "Choose wisely \nA - Register a person \nB - Display \nC - Search \nQ - Quit\n";
     cin >> val;
@@ -59,7 +60,7 @@ void interfaceLayer::skra()
     cout << "Register one person at  a time\n";
     cout << "Enter first and last name, gender(M/F) and time alive"<<endl;
     cout << "For example:\n";
-    cout << "Jón Jónsson M 1950-2010\n";
+    cout << "Jón Jónsson M 1950 2010\n";
     getline (cin,registerperson);
     service.write(registerperson);
     cout << "\nWould you like to register another person?(Y/N)\n";

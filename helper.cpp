@@ -25,7 +25,11 @@ vector<person> helper::read()
 return skil;
 }
 
+<<<<<<< HEAD
  void write(person per)
+=======
+ void helper::write(person)
+>>>>>>> FETCH_HEAD
  {
    ofstream myfile;
 

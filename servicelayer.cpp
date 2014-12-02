@@ -51,3 +51,39 @@ vector<person> serviceLayer::search(string terms, char type){
 //{
 //    return a.firstName < b.firstName;
 //}
+
+vector<person> serviceLayer::list(char type)
+{
+    helper help;
+    vector<person> templist, temp, rtrnlist;
+
+    templist = help.read();
+
+
+    switch (type) {
+    case 'G':
+        for(unsigned int i = 0; i < templist.size(); i++)
+        {
+            if(templist[i].gender == 'f' || templist[i].gender == 'F')
+                    rtrnlist.push_back(templist[i]);
+            else
+                    temp.push_back(templist[i]);
+        }
+
+        for(unsigned int c = 0; c < temp.size(); c++)
+                    rtrnlist.push_back(temp[c]);
+
+        break;
+
+    case 'N':
+
+        break;
+
+    case 'A':
+
+
+        break;
+    }
+
+    return rtrnlist;
+}

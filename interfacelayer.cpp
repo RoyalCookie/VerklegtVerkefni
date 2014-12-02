@@ -41,19 +41,21 @@ void interfaceLayer::choose()
     do {
     cout << "Choose wisely \nA - Register a Person \nB - Display \nC - Search \nQ - Quit\n";
     cin >> val;
+    if(val > 90)
+        val = val - 32;
     std::cin.ignore();
 
     switch(val){
-    case ('A'|'a'):
+    case ('A'):
         skra();
         break;
-    case ('B'|'b'):
+    case ('B'):
     birta();
         break;
-    case ('C'|'c'):
+    case ('C'):
     leita();
         break;
-    case ('Q'|'q'):
+    case ('Q'):
     invalid=false;
         break;
     default :

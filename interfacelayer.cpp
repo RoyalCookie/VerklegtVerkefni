@@ -19,12 +19,8 @@ void interfaceLayer::sortitby(char& type)
       }while((type!='N')&&(type!='G')&&(type!='A'));
 
 }
-<<<<<<< HEAD
 
-void interfaceLayer::searchitby(char& sort)
-=======
 void interfaceLayer::searchitby(char& sort) //Fyrir search fallið leita eftir í
->>>>>>> FETCH_HEAD
 {   char stafur;
     do{
   cout << "N = Search by last name then first name\n"

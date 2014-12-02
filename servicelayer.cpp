@@ -42,6 +42,7 @@ vector<Person> serviceLayer::search(string terms, char type, char sort){
             }
             break;
     }
+
     return filteredList;
 }
 
@@ -59,3 +60,5 @@ vector<Person> serviceLayer::getList(char type)
     return ret;
 
 }
+
+

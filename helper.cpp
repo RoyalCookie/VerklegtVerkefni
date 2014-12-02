@@ -21,7 +21,19 @@ vector<Person> helper::read()
 
 
 
-return skil;
+   return skil;
+}
+
+vector<Person> helper::sort(string temp)
+{
+
+    Comparer comp = Comparer(temp);
+    list<Person> l = list<Person>();
+
+    l.sort(comp);
+    vector<Person> ret;
+    ret.insert(ret.begin(), l.begin(),l.end());
+    return ret;
 }
 
 

@@ -26,7 +26,7 @@ return skil;
 }
 
 
- void helper::write(person)
+ void helper::write(person per)
 
  {
    ofstream myfile;

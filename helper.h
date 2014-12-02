@@ -10,7 +10,7 @@ class helper{
 public:
     vector<person> sort(vector<person> listi, char type);
     vector<person> read();
-    void write(vector<person> listi);
+    void write(person per);
 };
 
 

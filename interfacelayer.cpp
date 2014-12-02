@@ -6,7 +6,8 @@ interfaceLayer::interfaceLayer()
 {
 }
 void sortitby(char& type)
-{   char stafur;
+{
+    char stafur;
     do{
   cout << "N = Sort by last name then first name\n"
        << "G = Sort by gender\n"

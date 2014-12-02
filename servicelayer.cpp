@@ -60,6 +60,7 @@ vector<person> serviceLayer::list(char type)
 
     switch (type) {
     case 'G':
+    {
         for(unsigned int i = 0; i < templist.size(); i++)
         {
             if(templist[i].gender == 'f' || templist[i].gender == 'F')
@@ -70,10 +71,11 @@ vector<person> serviceLayer::list(char type)
 
         for(unsigned int c = 0; c < temp.size(); c++)
                     rtrnlist.push_back(temp[c]);
-
+    }
         break;
 
     case 'N':
+    {
         person temppersonN;
 
         for(unsigned int z = 0; z < temp.size(); z++)
@@ -88,10 +90,11 @@ vector<person> serviceLayer::list(char type)
                 }
             }
         }
-
+    }
         break;
-/*
+
     case 'A':
+    {
         person temppersonA;
 
         for(unsigned int z = 0; z < temp.size(); z++)
@@ -106,10 +109,9 @@ vector<person> serviceLayer::list(char type)
                 }
             }
         }
-
-
+    }
         break;
-*/
+
     }
 
     return rtrnlist;

@@ -10,7 +10,7 @@ void interfaceLayer::sortitby(char& type)
     do{
   cout << "N = Sort by last name then first name\n"
        << "G = Sort by gender\n"
-       << "A = Sort by alive\n";
+       << "A = Sort by date of birth\n";
     cin >> stafur;
     type=(toupper(stafur));
      if((type!='N')&&(type!='G')&&(type!='A'))
@@ -40,7 +40,6 @@ void interfaceLayer::choose()
         break;
     default :
     cout << " Wrong input\n";
-    invalid=true;
     }
    }while(invalid==true);
 }

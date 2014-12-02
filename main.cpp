@@ -15,7 +15,9 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     // Search implementation
-    vector<person> listin;
-    listin = search("Simpson",'N');
+    //vector<person> listin;
+    //listin = search("Simpson",'N');
+
+
 
 }

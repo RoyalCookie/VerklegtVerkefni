@@ -25,13 +25,26 @@ vector<person> helper::read()
 return skil;
 }
 
- void <person> write(person)
+ void write(person per)
  {
    ofstream myfile;
 
    myfile.open ("file.txt");
 
-   myfile << person;
+   string total ="";
+   total += per.firstName;
+   total += " ";
+   total += per.lastName;
+   total += " ";
+   total += per.gender;
+   total += " ";
+   total += per.dateOfBirth;
+   total += " ";
+   total += per.dateOfDeath;
+
+
+
+   myfile << total << endl;
 
    myfile.close();
 

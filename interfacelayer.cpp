@@ -5,7 +5,7 @@ using namespace std;
 interfaceLayer::interfaceLayer()
 {
 }
-void sortitby(char& type)
+void interfaceLayer::sortitby(char& type)
 {   char stafur;
     do{
   cout << "N = Sort by last name then first name\n"

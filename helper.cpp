@@ -25,7 +25,7 @@ vector<person> helper::read()
 return skil;
 }
 
- void <person> write(person)
+ vector<person> helper::write(person)
  {
    ofstream myfile;
 

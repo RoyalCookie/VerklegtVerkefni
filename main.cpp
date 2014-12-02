@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include "person.h"
+#include "comparer.h"
 using namespace std;
 
 vector<person> read();
@@ -13,11 +14,22 @@ void print(vector<person> eh);
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-
-    // Search implementation
-    //vector<person> listin;
-    //listin = search("Simpson",'N');
-
-
+    Comparer comp = Comparer("N");
+    vector<person> l;
+//    for(int i = 0; i < 15; i++){
+//            l.push_back(pesron(asd));
+//    }
+//    try {
+//        l.sort(comp);
+//        outList(l);
+//    } catch(UserErrorException e) {
+//        cout << "Kjáni!!!" << endl;
+//    } catch(InvalidSortException e) {
+//        cout << "Þekkt villa" << endl;
+//    } catch(...) {//InvalidSortException e
+//        cout << "ERROR ########## Invalid sort type ############" << endl;
+//        continue;
+//    }
+>>>>>>> Stashed changes
 
 }

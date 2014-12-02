@@ -58,7 +58,7 @@ vector<person> serviceLayer::list(char type)
     vector<person> templist, temp, rtrnlist;
 
     templist = help.read();
-    type = toupper(type);
+
 
     switch (type) {
     case 'G':

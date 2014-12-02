@@ -59,7 +59,7 @@ void interfaceLayer::skra()
     cout << "Register one person at  a time\n";
     cout << "Enter first and last name, gender(M/F) and time alive"<<endl;
     cout << "For example:\n";
-    cout << "Jón Jónsson M 1950-2010\n";
+    cout << "Jón Jónsson M 1950 2010\n";
     getline (cin,registerperson);
     service.write(registerperson);
     cout << "\nWould you like to register another person?(Y/N)\n";

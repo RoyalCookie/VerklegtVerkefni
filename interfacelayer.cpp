@@ -4,6 +4,7 @@ using namespace std;
 interfaceLayer::interfaceLayer()
 {
 }
+
 void interfaceLayer::sortitby(char& type)
 {   char stafur;
     do{
@@ -18,6 +19,7 @@ void interfaceLayer::sortitby(char& type)
       }while((type!='N')&&(type!='G')&&(type!='A'));
 
 }
+
 void interfaceLayer::searchitby(char& sort)
 {   char stafur;
     do{

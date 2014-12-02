@@ -48,17 +48,11 @@ vector<Person> serviceLayer::search(string terms, char type, char sort){
 
 vector<Person> serviceLayer::getList(char type)
 {
-    string temp = "";
-    temp += type;
-
-    Comparer comp = Comparer(temp);
-    list<Person> l = list<Person>();
-
-    l.sort(comp);
-    vector<Person> ret;
-    ret.insert(ret.begin(), l.begin(),l.end());
-    return ret;
-
+    string eh = "";
+    eh += type;
+    vector<Person> readList = help.read();
+    vector<Person> sortedList = help.sort(eh, readList);
+    return sortedList;
 }
 
 

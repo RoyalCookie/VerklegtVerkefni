@@ -9,6 +9,6 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-//    interfaceLayer ui;
-//    ui.choose();
+    interfaceLayer ui;
+    ui.choose();
 }

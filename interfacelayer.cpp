@@ -13,14 +13,18 @@ void interfaceLayer::sortitby(char& type)
        << "A = Sort by date of birth\n";
     cin >> stafur;
     std::cin.ignore();
-    type=(toupper(stafur));
+    type=(toupper(stafur));                    //breyta yfir í stóran staf
      if((type!='N')&&(type!='G')&&(type!='A'))
           cout << "Invalid input!\n";
       }while((type!='N')&&(type!='G')&&(type!='A'));
 
 }
+<<<<<<< HEAD
 
 void interfaceLayer::searchitby(char& sort)
+=======
+void interfaceLayer::searchitby(char& sort) //Fyrir search fallið leita eftir í
+>>>>>>> FETCH_HEAD
 {   char stafur;
     do{
   cout << "N = Search by last name then first name\n"
@@ -68,7 +72,7 @@ void interfaceLayer::birta()
     vector<Person> listi;
     char afram,type;
     do{
-    sortitby(type);
+    sortitby(type);   //gildi fyrir upprodun
     listi = service.getList(type);
     for(int i = 0; i < listi.size(); i++){
         cout << listi[i] << endl;
@@ -88,7 +92,7 @@ void interfaceLayer::skra()
     cout << "For example:\n";
     cout << "Jon Jonsson M 1950 2010\n";
     getline (cin,registerPerson);
-    service.write(registerPerson);
+    service.write(registerPerson);  //tekur vid einum  streng og skilar til write
     cout << "\nWould you like to register another Person?(Y/N)\n";
     cin >> afram;
     std::cin.ignore();
@@ -106,7 +110,7 @@ void interfaceLayer::leita()
     std::cin.ignore();
     sortitby(type);
     searchitby(sort);
-    list = service.search(terms,type,sort);
+    list = service.search(terms,sort,type);
     for(int i = 0; i < list.size(); i++){
         cout << list[i] << endl;
     }

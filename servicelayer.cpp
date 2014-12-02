@@ -63,7 +63,7 @@ vector<person> serviceLayer::list(char type)
     {
         for(unsigned int i = 0; i < templist.size(); i++)
         {
-            if(templist[i].gender == 'f' || templist[i].gender == 'F')
+            if(templist[i].gender == 'F')
                     rtrnlist.push_back(templist[i]);
             else
                     temp.push_back(templist[i]);
@@ -82,13 +82,24 @@ vector<person> serviceLayer::list(char type)
         {
             for(unsigned int x = 1; x < temp.size(); x++)
             {
-                if(templist[z].dateOfBirth > templist[x].dateOfBirth)
+                if(templist[z].lastName > templist[x].lastName)
                 {
                     temppersonN = templist[z];
                     templist[z] = templist[x];
                     templist[x] = temppersonN;
                 }
+                else if(templist[z].lastName == templist[x].lastName)
+                {
+                    if(templist[z].firstName > templist[x].firstName)
+                    {
+                        temppersonN = templist[z];
+                        templist[z] = templist[x];
+                        templist[x] = temppersonN;
+                    }
+
+                }
             }
+            rtrnlist.push_back(templist[z]);
         }
     }
         break;

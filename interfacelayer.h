@@ -13,6 +13,7 @@ public:
     void leita();
     void birta();
     void sortitby(char& type);
+    void searchitby(char& sort);
 private:
     serviceLayer service;
 };

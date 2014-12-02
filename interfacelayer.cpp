@@ -18,6 +18,20 @@ void interfaceLayer::sortitby(char& type)
       }while((type!='N')&&(type!='G')&&(type!='A'));
 
 }
+void interfaceLayer::searchitby(char& sort)
+{   char stafur;
+    do{
+  cout << "N = Search by last name then first name\n"
+       << "G = Search by gender\n"
+       << "A = Search by date of birth\n";
+    cin >> stafur;
+    std::cin.ignore();
+    sort=(toupper(stafur));
+     if((sort!='N')&&(sort!='G')&&(sort!='A'))
+          cout << "Invalid input!\n";
+      }while((sort!='N')&&(sort!='G')&&(sort!='A'));
+
+}
 
 void interfaceLayer::choose()
 {   char val;
@@ -82,14 +96,15 @@ void interfaceLayer::skra()
 void interfaceLayer::leita()
 {
     vector<Person> list;
-    char afram,type;
+    char afram,type,sort;
     string terms;
     do{
     cout << "Enter search term: ";
     cin >> terms;
     std::cin.ignore();
     sortitby(type);
-    list = service.search(terms,type);
+    searchitby(sort);
+    list = service.search(terms,type,sort);
     for(int i = 0; i < list.size(); i++){
         cout << list[i] << endl;
     }

@@ -1,24 +1,20 @@
 #include "helper.h"
-#include "person.h"
-#include <iostream>
-#include <fstream>
-
-//vector<person> Sort(vector<person> listi, char type){
-//    list<person> listToSort;
+//vector<Person> Sort(vector<Person> listi, char type){
+//    list<Person> listToSort;
 //    for(int i = 0; i < listi.size; i++){
 //        listToSort.push_back(listi[i]);
 //    }
 //}
 
-vector<person> helper::read()
+vector<Person> helper::read()
 {
-    vector<person> skil;
+    vector<Person> skil;
     ifstream lesari("file.txt");
     string lesa;
    while (getline(lesari,lesa))
    {
 
-       skil.push_back(person(lesa));
+       skil.push_back(Person(lesa));
 
 
    }
@@ -29,7 +25,7 @@ return skil;
 }
 
 
- void helper::write(person per)
+ void helper::write(Person per)
 
  {
    ofstream myfile;

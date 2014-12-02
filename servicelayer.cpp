@@ -7,14 +7,14 @@ serviceLayer::serviceLayer()
 }
 
 void serviceLayer::write(string input){
-    person newPerson(input);
+    Person newPerson(input);
     //help.write(newPerson);
 }
 
-vector<person> serviceLayer::search(string terms, char type){
+vector<Person> serviceLayer::search(string terms, char type){
     helper help;
-    vector<person> listi = help.read();
-    vector<person> filteredList;
+    vector<Person> listi = help.read();
+    vector<Person> filteredList;
     switch(type){
         case 'N':       // Name
             for(int i = 0; i < (signed)listi.size(); i++){
@@ -44,14 +44,9 @@ vector<person> serviceLayer::search(string terms, char type){
     return filteredList;
 }
 
-
-//bool serviceLayer::compare_firstName(const person &a, const person &b)
-//{
-//    return a.firstName < b.firstName;
-//}
-
-vector<person> serviceLayer::list(char type)
+vector<Person> serviceLayer::getList(char type)
 {
+<<<<<<< Updated upstream
     helper help;
     vector<person> templist, temp, rtrnlist;
 
@@ -73,11 +68,15 @@ vector<person> serviceLayer::list(char type)
                     rtrnlist.push_back(temp[c]);
     }
         break;
+=======
+    string temp = "";
+    temp += type;
+    list<Person> l = list<Person>();
+>>>>>>> Stashed changes
 
-    case 'N':
-    {
-        person temppersonN;
+    Comparer comp = Comparer(temp);
 
+<<<<<<< Updated upstream
         for(unsigned int z = 0; z < temp.size(); z++)
         {
             for(unsigned int x = 1; x < temp.size(); x++)
@@ -124,6 +123,11 @@ vector<person> serviceLayer::list(char type)
         break;
 
     }
+=======
+    l.sort(comp);
+    vector<Person> ret;
+    ret.insert(ret.begin(), l.begin(),l.end());
+    return ret;
+>>>>>>> Stashed changes
 
-    return rtrnlist;
 }

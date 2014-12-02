@@ -1,5 +1,4 @@
 #include "interfacelayer.h"
-#include "servicelayer.h"
 using namespace std;
 
 interfaceLayer::interfaceLayer()
@@ -18,11 +17,12 @@ void interfaceLayer::sortitby(char& type)
       }while((type!='N')&&(type!='G')&&(type!='A'));
 
 }
+
 void interfaceLayer::choose()
 {   char val;
     bool invalid=true;
     do {
-    cout << "Choose wisely \nA - Register a person \nB - Display \nC - Search \nQ - Quit\n";
+    cout << "Choose wisely \nA - Register a Person \nB - Display \nC - Search \nQ - Quit\n";
     cin >> val;
 
     switch(val){
@@ -43,37 +43,41 @@ void interfaceLayer::choose()
     }
    }while(invalid==true);
 }
+
 void interfaceLayer::birta()
 {
-    vector<person> list;
+
+    vector<Person> listi;
     char afram,type;
     do{
     sortitby(type);
-    list = service.list(type);
-    for(int i = 0; i < list.size(); i++){
-        cout << list[i] << endl;
+    listi = service.getList(type);
+    for(int i = 0; i < listi.size(); i++){
+        cout << listi[i] << endl;
     }
     cout << "\nWould you like to display again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');
 }
+
 void interfaceLayer::skra()
 {   char afram;
     do{
-    string registerperson;
-    cout << "Register one person at  a time\n";
+    string registerPerson;
+    cout << "Register one Person at  a time\n";
     cout << "Enter first and last name, gender(M/F) and time alive"<<endl;
     cout << "For example:\n";
     cout << "Jon Jonsson M 1950 2010\n";
-    getline (cin,registerperson);
-    service.write(registerperson);
-    cout << "\nWould you like to register another person?(Y/N)\n";
+    getline (cin,registerPerson);
+    service.write(registerPerson);
+    cout << "\nWould you like to register another Person?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');
 }
+
 void interfaceLayer::leita()
 {
-    vector<person> list;
+    vector<Person> list;
     char afram,type;
     string terms;
     do{

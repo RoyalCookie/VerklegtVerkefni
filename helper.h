@@ -1,16 +1,13 @@
 #define HELPER_H
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include "person.h"
-#include <string>
+
+#include "Person.h"
 
 using namespace std;
 class helper{
 public:
-    vector<person> sort(vector<person> listi, char type);
-    vector<person> read();
-    void write(person per);
+    vector<Person> sort(vector<Person> listi, char type);
+    vector<Person> read();
+    void write(Person per);
 };
 
 

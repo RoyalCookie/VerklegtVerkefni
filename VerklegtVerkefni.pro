@@ -16,16 +16,15 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    servicelayer.cpp \
     interfacelayer.cpp \
-    person.cpp \
+    Person.cpp \
     helper.cpp \
-    comparer.cpp
+    comparer.cpp \
+    serviceLayer.cpp
 
 HEADERS += \
-    servicelayer.h \
     interfacelayer.h \
-    person.h \
+    Person.h \
     helper.h \
-    cpplinq.hpp \
-    comparer.h
+    comparer.h \
+    serviceLayer.h

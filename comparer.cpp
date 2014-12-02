@@ -4,16 +4,13 @@ Comparer::Comparer() {
 
 }
 
-void Comparer::changeType(string col){
-    this->orderCol = col;
-}
 
 Comparer::Comparer( string col ) {
     this->orderCol = col;
 }
 
 
-bool Comparer::operator()(const person first, const person second) {
+bool Comparer::operator()(const Person first, const Person second) {
     if(orderCol == "N") {
         return first.lastName < second.lastName;
     } else if(orderCol == "G") {

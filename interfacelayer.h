@@ -1,12 +1,7 @@
 #ifndef INTERFACELAYER_H
 #define INTERFACELAYER_H
 
-#include <iostream>
-#include <string>
-#include <vector>
-#include <list>
-#include <ctype.h>
-#include "servicelayer.h"
+#include "serviceLayer.h"
 
 class interfaceLayer
 {

@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <ctype.h>
 #include "servicelayer.h"
 
 class interfaceLayer

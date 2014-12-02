@@ -6,19 +6,20 @@ interfaceLayer::interfaceLayer()
 {
 }
 void sortitby(char& type)
-{
+{   char stafur;
     do{
   cout << "N = Sort by last name then first name\n"
        << "G = Sort by gender\n"
        << "A = Sort by alive\n";
-  cin >> type;
-      if((type!='N')|(type!='G')|(type!='A'))
+  cin >> stafur;
+      if((stafur!='N')|(stafur!='n')|(stafur!='G')|(stafur!='g')|(stafur!='A')|(stafur!='a'))
           cout << "Invalid input!";
-      }while((type!='N')|(type!='G')|(type!='A'));
+      }while((stafur!='N')|(stafur!='n')|(stafur!='G')|(stafur!='g')|(stafur!='A')|(stafur!='a'));
+    type=(toupper(stafur));
 }
 void interfaceLayer::choose()
 {   char val;
-    bool invalid=false;
+    bool invalid=true;
     do {
     cout << "Choose wisely \nA - Register a person \nB - Display \nC - Search \nQ - Quit\n";
     cin >> val;
@@ -47,7 +48,7 @@ void interfaceLayer::birta()
     char afram,type;
     do{
     sortitby(type);
-    service.list(type);
+    service.list(toupper(type));
     cout << "\nWould you like to display again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');
@@ -74,7 +75,7 @@ void interfaceLayer::leita()
     cout << "Enter search term: ";
     cin >> terms;
     sortitby(type);
-    service.search(terms, type);
+    service.search(terms, toupper(type));
     cout << "\nWould you like to search again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');

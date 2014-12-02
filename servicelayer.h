@@ -11,7 +11,7 @@ private:
     helper help;
 public:
     serviceLayer();
-    vector<Person>  search(string terms, char type);
+    vector<Person>  search(string terms, char type, char sort);
     vector<Person> getList(char type);
     void write(string input);
 };

@@ -8,30 +8,31 @@ serviceLayer::serviceLayer()
 
 void serviceLayer::write(string input){
     Person newPerson(input);
-    //help.write(newPerson);
+    help.write(newPerson);
 }
 
-vector<Person> serviceLayer::search(string terms, char type){
+vector<Person> serviceLayer::search(string terms, char type, char sort){
+    string eh = terms;
     helper help;
     vector<Person> listi = help.read();
     vector<Person> filteredList;
     switch(type){
         case 'N':       // Name
             for(int i = 0; i < (signed)listi.size(); i++){
-                if(listi[i].lastName == terms)
+                if(listi[i].lastName == eh)
                     filteredList.push_back(listi[i]);
             }
             break;
         case 'G':       // Gender
             for(int i = 0; i < (signed)listi.size(); i++){
-                if(listi[i].gender == terms[0])
+                if(listi[i].gender == eh[0])
                     filteredList.push_back(listi[i]);
             }
             break;
         case 'A':       // Date of Birth
             // String -> Int
             int value;
-            stringstream convert(terms);
+            stringstream convert(eh);
             if ( !(convert >> value) )
                 value = 0;
             //-----

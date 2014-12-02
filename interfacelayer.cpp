@@ -48,7 +48,7 @@ void interfaceLayer::birta()
     char afram,type;
     do{
     sortitby(type);
-    service.list(toupper(type));
+    service.list(type);
     cout << "\nWould you like to display again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');
@@ -75,7 +75,7 @@ void interfaceLayer::leita()
     cout << "Enter search term: ";
     cin >> terms;
     sortitby(type);
-    service.search(terms, toupper(type));
+    service.search(terms, type);
     cout << "\nWould you like to search again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');

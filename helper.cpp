@@ -22,13 +22,9 @@ vector<Person> helper::read()
    return skil;
 }
 
-<<<<<<< Updated upstream
+
 vector<Person> helper::sort(string temp, vector<Person> per)
-=======
 
-
-vector<Person> helper::sort(string temp)
->>>>>>> Stashed changes
 {
     list<Person> l = list<Person>();
     for(int i = 0; i < per.size(); i++){
@@ -43,13 +39,11 @@ vector<Person> helper::sort(string temp)
 }
 
 
-<<<<<<< Updated upstream
+
 void helper::write(Person per)
-=======
 
- void helper::write(Person per)
 
->>>>>>> Stashed changes
+
  {
    //opnum textaskjalid file
    ofstream myfile;

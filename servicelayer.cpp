@@ -58,7 +58,6 @@ vector<person> serviceLayer::list(char type)
     vector<person> templist, temp, rtrnlist;
 
     templist = help.read();
-    type = toupper(type);
 
     switch (type) {
     case 'G':
@@ -80,6 +79,20 @@ vector<person> serviceLayer::list(char type)
         break;
 
     case 'A':
+        person tempperson;
+
+        for(unsigned int z = 0; z < temp.size(); z++)
+        {
+            for(unsigned int x = 1; x < temp.size(); x++)
+            {
+                if(templist[z].dateOfBirth > templist[x].dateOfBirth)
+                {
+                    tempperson = templist[z];
+                    templist[z] = templist[x];
+                    templist[x] = tempperson;
+                }
+            }
+        }
 
 
         break;

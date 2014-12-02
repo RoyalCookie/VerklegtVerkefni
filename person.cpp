@@ -1,6 +1,9 @@
 #include "person.h"
 using namespace std;
+person::person()
+{
 
+}
 person::person(string variables){
     vector<string> values;
     string temp = "";

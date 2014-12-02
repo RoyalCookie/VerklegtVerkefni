@@ -76,11 +76,7 @@ vector<person> serviceLayer::list(char type)
         break;
 
     case 'N':
-
-        break;
-
-    case 'A':
-        person tempperson;
+        person temppersonN;
 
         for(unsigned int z = 0; z < temp.size(); z++)
         {
@@ -88,15 +84,34 @@ vector<person> serviceLayer::list(char type)
             {
                 if(templist[z].dateOfBirth > templist[x].dateOfBirth)
                 {
-                    tempperson = templist[z];
+                    temppersonN = templist[z];
                     templist[z] = templist[x];
-                    templist[x] = tempperson;
+                    templist[x] = temppersonN;
+                }
+            }
+        }
+
+        break;
+/*
+    case 'A':
+        person temppersonA;
+
+        for(unsigned int z = 0; z < temp.size(); z++)
+        {
+            for(unsigned int x = 1; x < temp.size(); x++)
+            {
+                if(templist[z].dateOfBirth > templist[x].dateOfBirth)
+                {
+                    temppersonA = templist[z];
+                    templist[z] = templist[x];
+                    templist[x] = temppersonA;
                 }
             }
         }
 
 
         break;
+*/
     }
 
     return rtrnlist;

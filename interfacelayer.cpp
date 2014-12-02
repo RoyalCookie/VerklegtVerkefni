@@ -74,13 +74,17 @@ void interfaceLayer::skra()
 }
 void interfaceLayer::leita()
 {
+    vector<person> list;
     char afram,type;
     string terms;
     do{
     cout << "Enter search term: ";
     cin >> terms;
     sortitby(type);
-    service.search(terms, type);
+    list = service.search(terms,type);
+    for(int i = 0; i < list.size(); i++){
+        cout << list[i] << endl;
+    }
     cout << "\nWould you like to search again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');

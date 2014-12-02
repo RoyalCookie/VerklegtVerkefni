@@ -1,16 +1,18 @@
 #ifndef COMPARER_H
 #define COMPARER_H
-#include <string>
 
+#include <iostream>
+#include "person.h"
+using namespace std;
 
-class comparer
-{
+class Comparer {
 private:
-    std::string orderCol;
+    string orderCol;
     bool compare(std::string first, std::string second);
 public:
-    comparer();
-    comparer(std::string col);
+    void changeType(string col);
+    Comparer();
+    Comparer( std::string col);
+    bool operator()(const person first, const person second);
 };
-
 #endif // COMPARER_H

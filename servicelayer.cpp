@@ -10,7 +10,7 @@ serviceLayer::serviceLayer()
 
 void serviceLayer::write(string input){
     person newPerson(input);
-    help.write(newPerson);
+    //help.write(newPerson);
 }
 
 vector<person> serviceLayer::search(string terms, char type){
@@ -58,6 +58,7 @@ vector<person> serviceLayer::list(char type)
     vector<person> templist, temp, rtrnlist;
 
     templist = help.read();
+
 
     switch (type) {
     case 'G':

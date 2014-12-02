@@ -1,14 +1,11 @@
 #include "Person.h"
 using namespace std;
-person::person()
+Person::Person()
 {
-
-<<<<<<< Updated upstream
 }
-person::person(string variables){
-=======
+
 Person::Person(string variables){
->>>>>>> Stashed changes
+
     vector<string> values;
     string temp = "";
 

@@ -5,22 +5,22 @@ interfaceLayer::interfaceLayer()
 {
 }
 
-void interfaceLayer::sortitby(char& type)
+void interfaceLayer::sortitby(char& type) //valmynd fyrir sort
 {   char stafur;
     do{
   cout << "N = Sort by last name then first name\n"
        << "G = Sort by gender\n"
        << "A = Sort by date of birth\n";
     cin >> stafur;
-    std::cin.ignore();
+    std::cin.ignore();                         //til að hægt sé að nota getline seinna
     type=(toupper(stafur));                    //breyta yfir í stóran staf
-     if((type!='N')&&(type!='G')&&(type!='A'))
+     if((type!='N')&&(type!='G')&&(type!='A')) //skoðar hvort innsláttur er rettur
           cout << "Invalid input!\n";
       }while((type!='N')&&(type!='G')&&(type!='A'));
 
 }
 
-void interfaceLayer::searchitby(char& sort) //Fyrir search fallið leita eftir í
+void interfaceLayer::searchitby(char& sort) //valmynd fyrir i hverju á að leita
 {   char stafur;
     do{
   cout << "N = Search by last name then first name\n"
@@ -46,16 +46,16 @@ void interfaceLayer::choose()
     std::cin.ignore();
 
     switch(val){
-    case ('A'):
+    case ('A'):     //kallar á register
         skra();
         break;
-    case ('B'):
+    case ('B'):     //kallar á display
     birta();
         break;
-    case ('C'):
+    case ('C'):     //kallar á search
     leita();
         break;
-    case ('Q'):
+    case ('Q'):     //hættir keyrslu
     invalid=false;
         break;
     default :
@@ -68,9 +68,9 @@ void interfaceLayer::birta()
 {
 
     vector<Person> listi;
-    char afram,type;
+    char afram,type;  //gildi fyrir endurköllun og upprodun
     do{
-    sortitby(type);   //gildi fyrir upprodun
+    sortitby(type);
     listi = service.getList(type);
     for(int i = 0; i < listi.size(); i++){
         cout << listi[i] << endl;
@@ -106,9 +106,9 @@ void interfaceLayer::leita()
     cout << "Enter search term: ";
     cin >> terms;
     std::cin.ignore();
-    sortitby(type);
-    searchitby(sort);
-    list = service.search(terms,sort,type);
+    sortitby(sort);
+    searchitby(type);
+    list = service.search(terms,type,sort);
     for(int i = 0; i < list.size(); i++){
         cout << list[i] << endl;
     }

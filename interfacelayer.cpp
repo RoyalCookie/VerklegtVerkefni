@@ -28,7 +28,7 @@ void interfaceLayer::choose()
         skra();
         break;
     case ('B'|'b'):
-
+    birta();
         break;
     case ('C'|'c'):
     leita();

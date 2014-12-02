@@ -22,6 +22,9 @@ vector<person> helper::read()
 
 
    }
+
+
+
 return skil;
 }
 
@@ -31,7 +34,7 @@ return skil;
  {
    ofstream myfile;
 
-   myfile.open ("file.txt");
+   myfile.open ("file.txt", ofstream::app);
 
    string total ="";
    total += per.firstName;
@@ -40,10 +43,16 @@ return skil;
    total += " ";
    total += per.gender;
    total += " ";
-   total += per.dateOfBirth;
-   total += " ";
-   total += per.dateOfDeath;
 
+   ostringstream convert1;
+   convert1 << per.dateOfBirth;
+
+   total += convert1.str();
+   total += " ";
+
+   ostringstream convert2;
+   convert2 << per.dateOfDeath;
+   total += convert2.str();
 
 
    myfile << total << endl;
@@ -57,5 +66,5 @@ return skil;
 
 
 
-//lesa inn ur textaskra og seperate-a hverja linu fyrir sig. hver lina er ein person. Skila thvi svo.
+
 

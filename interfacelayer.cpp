@@ -5,14 +5,8 @@ using namespace std;
 interfaceLayer::interfaceLayer()
 {
 }
-<<<<<<< HEAD
-void sortitby(char& type)
-{
-    char stafur;
-=======
 void interfaceLayer::sortitby(char& type)
 {   char stafur;
->>>>>>> FETCH_HEAD
     do{
   cout << "N = Sort by last name then first name\n"
        << "G = Sort by gender\n"
@@ -52,10 +46,14 @@ void interfaceLayer::choose()
 }
 void interfaceLayer::birta()
 {
+    vector<person> list;
     char afram,type;
     do{
     sortitby(type);
-    service.list(type);
+    list = service.list(type);
+    for(int i = 0; i < list.size(); i++){
+        cout << list[i] << endl;
+    }
     cout << "\nWould you like to display again?(Y/N)\n";
     cin >> afram;
     }while(afram=='y' || afram == 'Y');

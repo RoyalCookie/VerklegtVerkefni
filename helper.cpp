@@ -27,7 +27,7 @@ vector<Person> helper::sort(string temp, vector<Person> per)
 
 {
     list<Person> l = list<Person>();
-    for(int i = 0; i < per.size(); i++){
+    for(int i = 0; i < (signed)per.size(); i++){
         l.push_back(per[i]);
     }
     Comparer comp = Comparer(temp);

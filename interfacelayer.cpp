@@ -106,17 +106,10 @@ void interfaceLayer::leita()
     cout << "Enter search term: ";
     cin >> terms;
     std::cin.ignore();
-<<<<<<< Updated upstream
-    sortitby(sort);
-    searchitby(type);
-    list = service.search(terms,type,sort);
-    for(int i = 0; i < list.size(); i++){
-=======
     sortitby(type);
     searchitby(sort);
     list = service.search(terms,sort,type);
     for(int i = 0; i < (signed)list.size(); i++){
->>>>>>> Stashed changes
         cout << list[i] << endl;
     }
     cout << "\nWould you like to search again?(Y/N)\n";

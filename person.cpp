@@ -1,10 +1,10 @@
-#include "Person.h"
+#include "person.h"
 using namespace std;
-Person::Person()
+person::person()
 {
 }
 
-Person::Person(string variables){
+person::person(string variables){
 
     vector<string> values;
     string temp = "";
@@ -41,7 +41,7 @@ Person::Person(string variables){
     dateOfDeath = atoi(values[4+mod].c_str());
 }
 
-void Person::set(string variables){
+void person::set(string variables){
     vector<string> values;
     string temp = "";
 
@@ -65,7 +65,7 @@ void Person::set(string variables){
     dateOfDeath = atoi(values[4].c_str());
 }
 // overwrite á << skilar  gildum í sama formati og þau eru sett í filea
-ostream& operator<<(ostream& stream, Person me){
+ostream& operator<<(ostream& stream, person me){
     stream << me.firstName << " " << me.lastName << " " << me.gender << " " << me.dateOfBirth << " " << me.dateOfDeath;
     return stream;
 }

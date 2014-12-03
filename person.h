@@ -12,15 +12,15 @@
 
 using namespace std;
 
-// Constructor For Person
+// Constructor For person
 // Takes in a  single line in the format of "Fname Lname Gender DateOfBirth DateOfDeath" i.e "Jon Asd m  1900 1948"
 // Takes the strings and breaks it down and sets the value of its properties.
-class Person{
+class person{
 public:
-    Person();
-    Person(string variables);
+    person();
+    person(string variables);
     void set(string variables);
-    friend ostream& operator<<(ostream& stream, Person me);
+    friend ostream& operator<<(ostream& stream, person me);
     string firstName;
     string lastName;
     char gender;

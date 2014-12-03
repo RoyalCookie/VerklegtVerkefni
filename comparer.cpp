@@ -10,7 +10,7 @@ Comparer::Comparer( string col ) {
 }
 
 
-bool Comparer::operator()(const Person first, const Person second) {
+bool Comparer::operator()(const person first, const person second) {
     if(orderCol == "N") {
         return first.lastName < second.lastName;
     } else if(orderCol == "G") {

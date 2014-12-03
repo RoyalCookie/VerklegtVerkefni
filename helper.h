@@ -1,14 +1,14 @@
 #ifndef HELPER_H
 #define HELPER_H
 
-#include "Person.h"
+#include "person.h"
 #include "comparer.h"
 
 class helper{
 public:
-    vector<Person> read();
-    vector<Person> sort(string temp, vector<Person> per);
-    void write(Person per);
+    vector<person> read();
+    vector<person> sort(string temp, vector<person> per);
+    void write(person per);
 };
 
 #endif // HELPER_H

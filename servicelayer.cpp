@@ -7,15 +7,15 @@ serviceLayer::serviceLayer()
 }
 
 void serviceLayer::write(string input){
-    Person newPerson(input);
-    help.write(newPerson);
+    person newperson(input);
+    help.write(newperson);
 }
 
-vector<Person> serviceLayer::search(string terms, char type, char sort){
+vector<person> serviceLayer::search(string terms, char type, char sort){
     string eh = terms;
     helper help;
-    vector<Person> listi = help.read();
-    vector<Person> filteredList;
+    vector<person> listi = help.read();
+    vector<person> filteredList;
     switch(type){
         case 'N':       // Name
             for(int i = 0; i < (signed)listi.size(); i++){
@@ -46,12 +46,12 @@ vector<Person> serviceLayer::search(string terms, char type, char sort){
     return filteredList;
 }
 
-vector<Person> serviceLayer::getList(char type)
+vector<person> serviceLayer::getList(char type)
 {
     string eh = "";
     eh += type;
-    vector<Person> readList = help.read();
-    vector<Person> sortedList = help.sort(eh, readList);
+    vector<person> readList = help.read();
+    vector<person> sortedList = help.sort(eh, readList);
     return sortedList;
 }
 

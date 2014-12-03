@@ -2,11 +2,11 @@
 
 
 
-vector<Person> helper::read()
+vector<person> helper::read()
 {
     //notum ifstream til ad na i uplysingar ur textaskjalinu
 
-    vector<Person> skil;
+    vector<person> skil;
     ifstream lesari("file.txt");
     string lina;
 
@@ -15,7 +15,7 @@ vector<Person> helper::read()
    while (getline(lesari,lina))
    {
 
-       skil.push_back(Person(lina));
+       skil.push_back(person(lina));
 
    }
 
@@ -23,24 +23,24 @@ vector<Person> helper::read()
 }
 
 
-vector<Person> helper::sort(string temp, vector<Person> per)
+vector<person> helper::sort(string temp, vector<person> per)
 
 {
-    list<Person> l = list<Person>();
+    list<person> l = list<person>();
     for(int i = 0; i < (signed)per.size(); i++){
         l.push_back(per[i]);
     }
     Comparer comp = Comparer(temp);
 
     l.sort(comp);
-    vector<Person> ret;
+    vector<person> ret;
     ret.insert(ret.begin(), l.begin(),l.end());
     return ret;
 }
 
 
 
-void helper::write(Person per)
+void helper::write(person per)
 
 
 

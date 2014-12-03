@@ -1,5 +1,5 @@
 #include <QCoreApplication>
-#include "Person.h"
+#include "person.h"
 #include "interfacelayer.h"
 #include "helper.h"
 using namespace std;

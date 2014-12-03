@@ -1,7 +1,7 @@
 #ifndef COMPARER_H
 #define COMPARER_H
 
-#include "Person.h"
+#include "person.h"
 
 using namespace std;
 
@@ -12,6 +12,6 @@ private:
 public:
     Comparer();
     Comparer( std::string col);
-    bool operator()(const Person first, const Person second);
+    bool operator()(const person first, const person second);
 };
 #endif // COMPARER_H

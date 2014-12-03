@@ -1,7 +1,7 @@
 #ifndef SERVICELAYER_H
 #define SERVICELAYER_H
 
-#include "Person.h"
+#include "person.h"
 #include "helper.h"
 #include "comparer.h"
 
@@ -11,8 +11,8 @@ private:
     helper help;
 public:
     serviceLayer();
-    vector<Person>  search(string terms, char type, char sort);
-    vector<Person> getList(char type);
+    vector<person>  search(string terms, char type, char sort);
+    vector<person> getList(char type);
     void write(string input);
 };
 

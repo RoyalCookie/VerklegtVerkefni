@@ -39,7 +39,7 @@ void interfaceLayer::choose()
 {   char val;
     bool invalid=true;
     do {
-    cout << "Choose wisely \nA - Register a Person \nB - Display \nC - Search \nQ - Quit\n";
+    cout << "Choose wisely \nA - Register a person \nB - Display \nC - Search \nQ - Quit\n";
     cin >> val;
     if(val > 90)
         val = val - 32;
@@ -67,7 +67,7 @@ void interfaceLayer::choose()
 void interfaceLayer::birta()
 {
 
-    vector<Person> listi;
+    vector<person> listi;
     char afram,type;  //gildi fyrir endurköllun og upprodun
     do{
     sortitby(type);
@@ -84,14 +84,14 @@ void interfaceLayer::birta()
 void interfaceLayer::skra()
 {   char afram;
     do{
-    string registerPerson;
-    cout << "Register one Person at  a time\n";
+    string registerperson;
+    cout << "Register one person at  a time\n";
     cout << "Enter first and last name, gender(M/F) and time alive"<<endl;
     cout << "For example:\n";
     cout << "Jon Jonsson M 1950 2010\n";
-    getline (cin,registerPerson);
-    service.write(registerPerson);  //tekur vid einum  streng og skilar til write
-    cout << "\nWould you like to register another Person?(Y/N)\n";
+    getline (cin,registerperson);
+    service.write(registerperson);  //tekur vid einum  streng og skilar til write
+    cout << "\nWould you like to register another person?(Y/N)\n";
     cin >> afram;
     std::cin.ignore();
     }while(afram=='y' || afram == 'Y');
@@ -99,7 +99,7 @@ void interfaceLayer::skra()
 
 void interfaceLayer::leita()
 {
-    vector<Person> list;
+    vector<person> list;
     char afram,type,sort;
     string terms;
     do{
